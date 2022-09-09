@@ -1,10 +1,12 @@
 # Terraform
 .terraform
+.terraform.lock.hcl
 *.tfstate
 *.tfstate.backup
 
 # Terragrunt
 .terragrunt-cache
+account.hcl
 
 # OS X
 .history
