@@ -19,6 +19,7 @@ locals {
   account_id   = local.account_vars.locals.aws_account_id
   aws_region   = local.region_vars.locals.aws_region
   aws_profile  = local.account_vars.locals.aws_profile
+  azs          = ["${local.region}a", "${local.region}b", "${local.region}c"]
 }
 
 # Generate an AWS provider block
