@@ -39,7 +39,7 @@ you are interested in battle-tested, production-ready Terraform code, check out 
    set the environment variable `TG_BUCKET_PREFIX` to set a custom prefix.
 3. Configure your AWS credentials using one of the supported [authentication
    mechanisms](https://www.terraform.io/docs/providers/aws/#authentication).
-4. Fill in your AWS Account ID's in `prod/account.hcl` and `non-prod/account.hcl`. 
+4. Fill in your AWS Account details in `prod/account.hcl` and `non-prod/account.hcl`. 
 5. If you have error validating provider credentials, use `terragrunt init -backend-config="access_key=" -backend-config="secret_key=" 
 -backend-config="region=" -backend-config="profile="`
 
