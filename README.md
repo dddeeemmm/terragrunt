@@ -30,16 +30,18 @@ you are interested in battle-tested, production-ready Terraform code, check out 
 
 ### Pre-requisites
 
-1. Install [Terraform](https://www.terraform.io/) version `1.1.4` and
+1. Install [Terraform](https://www.terraform.io/) version `1.1.4` or above and
    [Terragrunt](https://github.com/gruntwork-io/terragrunt) version `v0.36.0` or newer.
-1. Update the `bucket` parameter in the root `terragrunt.hcl`. We use S3 [as a Terraform
+2. Update the `bucket` parameter in the root `terragrunt.hcl`. We use S3 [as a Terraform
    backend](https://www.terraform.io/docs/backends/types/s3.html) to store your
    Terraform state, and S3 bucket names must be globally unique. The name currently in
    the file is already taken, so you'll have to specify your own. Alternatives, you can
    set the environment variable `TG_BUCKET_PREFIX` to set a custom prefix.
-1. Configure your AWS credentials using one of the supported [authentication
+3. Configure your AWS credentials using one of the supported [authentication
    mechanisms](https://www.terraform.io/docs/providers/aws/#authentication).
-1. Fill in your AWS Account ID's in `prod/account.hcl` and `non-prod/account.hcl`.
+4. Fill in your AWS Account ID's in `prod/account.hcl` and `non-prod/account.hcl`. 
+5. If you have error validating provider credentials, use `terragrunt init -backend-config="access_key=" -backend-config="secret_key=" 
+-backend-config="region=" -backend-config="profile="`
 
 
 ### Deploying a single module
